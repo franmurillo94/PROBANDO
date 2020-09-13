@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/css/all.min.css">
+        <title>Pinturilli</title>
+    </head>
+    
+    <body>
+        <header>
+            <h1>(Pinturilli)</h1>
+        </header>
+        <main>
+            <div class="paint_tools">
+                <div class="paint_item" data-tool="pincel">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <div class="paint_item" data-tool="goma">
+                    <i class="fas fa-eraser"></i>
+                </div>
+                <div class="paint_item">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <div>
+                    <input type="color" id="color">
+                    <input type="range" id="grosor" min="1" max="15" value="5">
+                </div>
+            </div>
+        <div class="main">
+            <div class="canvas-container">
+                <canvas class="canvas" id="canvas"></canvas>
+            </div>
+        </div>
+        <div class="filter" id="filter">
+            <div class="filter-btn">
+                <h3>Filtros</h3>
+            </div>
+            <div id="filter-toggle" class="filter-toggle active">
+                <div class="filter-button" data-filter="negativo"><button id="negativo">Negativo</button></div>
+                <div class="filter-button" data-filter="sepia"><button id="sepia">Sepia</button></div>
+                <div class="filter-button" data-filter="binarizacion"><button id="binarizacion">Binarizacion</button></div>
+                <div class="filter-button" data-filter="brillo"><button id="brillo">Brillo</button></div>
+                <div class="filter-button" data-filter="blur"><button id="blur">Blur</button></div>
+                <div class="filter-button" data-filter="saturacion"><button id="saturacion">Saturacion</button></div>
+                <div class="filter-button" data-filter="suavizado"><button id="suavizado">Suavizado</button></div>
+                <div class="filter-button" data-filter="bordes"><button id="bordes">Bordes</button></div>
+            </div>
+        </div>
+    </main>
+    <div class="main_tools">
+        <a download="image.png" id="download">
+            <button id="download_btn" data-title="Descargar Imagen">
+                <i class="fas fa-download"></i>
+            </button>
+        </a>
+        <button onclick="document.querySelector('.file').click();" data-title="Cargar Imagen">
+            <i class="fas fa-images"></i>
+        </button>
+        <input type="file" class="file">
+        <button id="clean-canvas" data-title="Restaurar Canvas">
+            <i class="fas fa-undo"></i>
+        </button>
+        <input type="file" class="file">
+    </div>
+    <script src="js/main.js" type="module" crossorigin="anonymous"></script>
+</body>
+
+</html>

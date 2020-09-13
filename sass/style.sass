@@ -1,0 +1,139 @@
+@import variables
+@import dataTitle
+    
+* 
+    //border: 1px solid red 
+    margin: 0
+    padding: 0
+body 
+    margin: 0
+    background-color: $fondo
+header 
+    text-align: center
+    background-color: $gris_dark
+    margin: 2vh 0 2vh 0
+    h1 
+        font-family: blue_eyes, sans-serif
+        font-size: 80px
+        font-weight: normal
+        color: $primario
+        padding: 4vh 0 4vh 0
+        margin: 0
+main 
+    display: flex 
+    flex-direction: column
+    justify-content: center
+    .paint_tools
+        background-color: $gris_dark
+        display: flex 
+        flex-direction: row
+        justify-content: space-around
+        border: 1px solid black
+        padding: 2vh
+        .paint_item
+            height: 70px
+            width: 70px
+            border-radius: 15px
+            color: grey
+            display: flex
+            align-items: center
+            justify-content: center
+            box-shadow: 0 0 2px black
+            cursor: pointer
+            .fas
+                font-size: 50px
+            &:hover
+                background-color: $secundario
+            &.active-tool
+                background-color: $checked
+                color: white
+                box-shadow: 0 0 4px white
+    .main 
+        padding: 40px
+        display: flex
+        justify-content: center
+        .canvas-container
+            border: 1px solid black
+            width: 500px
+            height: 300px
+            overflow: scroll
+            .canvas
+                background-color: white
+                height: auto
+                width: auto
+    .filter
+        background-color: $gris_dark
+        display: flex 
+        flex-direction: column
+        justify-content: space-around
+        border: 1px solid black
+        padding: 2vh
+        .filter-btn
+            border: 1px solid black
+            display: flex
+            justify-content: center
+            cursor: pointer
+            h3 
+                padding: 5px
+        .filter-toggle
+            padding: 10px
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            .filter-button
+                text-align: center
+                button
+                    border: none
+                    color: white
+                    padding: 5px 5px
+                    text-align: center
+                    text-decoration: none
+                    font-size: 12px
+                    background-color: $gris_dark
+                    border-radius: 20px
+                    margin: 2px
+                & :hover
+                    background-color: $secundario
+                    box-shadow: 0 0 10px white
+                & :active
+                    background-color: $checked
+                & :focus 
+                    outline: none         
+        & .active
+            display: none !important
+.main_tools 
+    margin-top: 2vh
+    background-color: $gris_dark
+    display: flex
+    justify-content: space-around
+    button
+        border: none
+        color: white
+        padding: 5px 15px
+        text-align: center
+        text-decoration: none
+        font-size: 16px
+        background-color: $gris_dark
+        border-radius: 20px
+        margin: 2vh
+        i 
+            color: grey
+            font-size: 50px
+            margin: 10px
+            &:hover 
+                box-shadow: none
+            &:focus
+                outline: none
+        &:hover
+            background-color: $primario
+            box-shadow: 0 0 10px white
+        &:active
+            background-color: $checked
+        &:active > i
+            color: white
+        &:focus 
+            outline: none
+    .file 
+        display: none
+@import queries
+ 
